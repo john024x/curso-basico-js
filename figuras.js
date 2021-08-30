@@ -1,24 +1,22 @@
 //cuadrado
-const lado = 5;
-const perimetro = lado + lado + lado + lado;
-const area = Math.pow(lado,2);
-console.group("Cuadrado");
-console.log(`Los lados del cuadrado miden ${lado}cm su perimetro es ${perimetro}cm y su area es ${area}cm^2`);
-console.groupEnd();
+circulo(7);
 //triangulo
-const lado1 = 5;
-const lado2 = 5;
-const lado3 = 5;
-const altura = 5.5;
-const perimetroTri = lado + lado + lado
-const areaTri = (lado3 * altura) / 2
-console.group("Triangulo");
-console.log(`Los lados del triangulo miden ${lado}cm su perimetro es ${perimetroTri}cm y su area es ${areaTri}cm^2`);
-console.groupEnd();
+triangulo(6,6,6,7);
 //Circulo
-const radio = 5;
-const perimetroCir = Math.PI * (radio*2);
-const areaCir = Math.PI * (Math.pow(radio,2))
-console.group("Circulo");
-console.log(`El radio del circulo mide ${radio}cm su perimetro es ${perimetroCir}cm y su area es ${areaCir}cm^2`);
-console.groupEnd();
+circulo(4)
+
+function circulo(lado){
+    let perimetro = lado + lado + lado + lado;
+    let  area = Math.pow(lado,2);
+    return console.log(`Los lados del cuadrado miden ${lado}cm su perimetro es ${perimetro}cm y su area es ${area}cm^2`);
+}
+function triangulo(lado1,lado2,lado3,altura){
+    let perimetroTri = lado1 + lado2 + lado3
+    let areaTri = (lado3 * altura) / 2
+    return console.log(`Los lados del triangulo miden ${lado1}cm su perimetro es ${perimetroTri}cm y su area es ${areaTri}cm^2`);
+}
+function circulo(radio){
+    let perimetroCir = Math.PI * (radio*2);
+    let areaCir = Math.PI * (Math.pow(radio,2))
+    return console.log(`El radio del circulo mide ${radio}cm su perimetro es ${perimetroCir}cm y su area es ${areaCir}cm^2`);
+}
