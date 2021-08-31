@@ -1,9 +1,8 @@
 //cuadrado
-circulo(7);
+
 //triangulo
-triangulo(6,6,6,7);
+
 //Circulo
-circulo(4)
 
 function circulo(lado){
     let perimetro = lado + lado + lado + lado;
@@ -19,4 +18,18 @@ function circulo(radio){
     let perimetroCir = Math.PI * (radio*2);
     let areaCir = Math.PI * (Math.pow(radio,2))
     return console.log(`El radio del circulo mide ${radio}cm su perimetro es ${perimetroCir}cm y su area es ${areaCir}cm^2`);
+}
+
+function calcularPerimetroCuadrado(){
+    const input = document.getElementById('InputCuadrado');
+    let value = input.value;
+    let perimetro = value*4;
+    alert(perimetro)
+}
+
+function calcularAreaCuadradoa(){
+    const input = document.getElementById('InputCuadrado');
+    let value = input.value;
+    let area = Math.pow(value, 2);
+    alert(area);
 }
